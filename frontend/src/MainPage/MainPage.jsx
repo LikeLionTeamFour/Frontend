@@ -7,7 +7,7 @@ import Nav from "../components/Nav";
 const MainPage = () => {
   const navigate = useNavigate();
   const [list, setList] = useState([]);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
@@ -79,7 +79,7 @@ const MainPage = () => {
                   className={`page-button ${
                     page === index + 1 ? "active" : ""
                   }`}
-                  onClick={() => handlePageChange(index)}
+                  onClick={() => handlePageChange(index + 1)}
                 >
                   {index + 1}
                 </button>
